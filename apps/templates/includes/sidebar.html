@@ -1,0 +1,23 @@
+<nav class="app-sidebar" id="appSidebar">
+    <div class="app-sidebar__inner">
+        <div class="app-sidebar__title">Destinations</div>
+        <ul class="nav flex-column">
+            <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == "turkey.hotel" %}active{% endif %}"
+                   href="{% url 'turkey_hotel' %}">Turkey</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == "egypt.hotel" %}active{% endif %}"
+                   href="{% url 'egypt_hotel' %}">Egypt</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == "odessa.hotel" %}active{% endif %}"
+                   href="{% url 'odessa_hotel' %}">Odessa</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link {% if request.resolver_match.url_name == "thailand.hotel" %}active{% endif %}"
+                   href="{% url 'thailand_hotel' %}">Thailand</a>
+            </li>
+        </ul>
+    </div>
+</nav>
