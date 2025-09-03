@@ -11,22 +11,6 @@
 
     {% include 'includes/navigation-transparent.html' %}
 
-    <header class="bg-gradient-dark">
-        <div class="page-header min-vh-75" style="background-image: url('{{ ASSETS_ROOT }}/img/turkey.jpg');">
-            <span class="mask bg-gradient-dark opacity-6"></span>
-            <div class="container">
-                <div class="row justify-content-center">
-                    <div class="col-lg-8 text-center mx-auto my-auto">
-                        <h1 class="text-white">Booking is easy and simple</h1>
-                        <h5 class="text-white">Ready to relax? Book a hotel in a few clicks.</h5>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-
-    {% include 'includes/sidebar.html' %}
-
     <main class="content-with-sidebar">
 
     <section class="py-7" style="
@@ -36,7 +20,17 @@
             background-repeat: no-repeat;
             padding: 50px 0;">
 
+        <span class="mask bg-gradient-dark opacity-6"></span>
+
         <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center mx-auto my-auto">
+                </div>
+            </div>
+        </div>
+        </header>
+
+        <div class="container" style="padding: 5%">
 
             <!-- Deluxe Room -->
             <div class="card card-body shadow-xl mx-3 mx-md-4 mt-n6 mb-5">
@@ -104,7 +98,7 @@
                                     One double bed and 2 sofas, sea view.
                                 </p>
                                 <p class="fw-bold text-dark fs-5 mb-3">
-                                    from <span class="text-success fw-bold">$100</span> / night
+                                    from <span class="text-success fw-bold">$130</span> / night
                                 </p>
                                 <a href="{% url 'home:booking_create' %}" class="btn btn-primary">Booking</a>
                             </div>
@@ -156,9 +150,9 @@
                                     One double and 2 single beds.
                                 </p>
                                 <p class="fw-bold text-dark fs-5 mb-3">
-                                    from <span class="text-success fw-bold">$80</span> / night
+                                    from <span class="text-success fw-bold">$120</span> / night
                                 </p>
-                                <a href="#" class="btn btn-success btn-lg px-4">Booking</a>
+                                <a href="{% url 'home:booking_create' %}" class="btn btn-primary">Booking</a>
                             </div>
                         </div>
                     </div>
@@ -208,9 +202,9 @@
                                     One double and 2 single beds.
                                 </p>
                                 <p class="fw-bold text-dark fs-5 mb-3">
-                                    from <span class="text-success fw-bold">$70</span> / night
+                                    from <span class="text-success fw-bold">$100</span> / night
                                 </p>
-                                <a href="#" class="btn btn-success btn-lg px-4">Booking</a>
+                                <a href="{% url 'home:booking_create' %}" class="btn btn-primary">Booking</a>
                             </div>
                         </div>
                     </div>

@@ -1,49 +1,27 @@
-<nav class="app-sidebar" id="appSidebar">
+{% load static %}
+
+<link rel="stylesheet" href="{% static 'assets/css/sidebar.css' %}">
+
+
+<nav class="sidebar" id="appSidebar">
     <div class="app-sidebar__inner">
-        <ul class="nav flex-column">
-            <li class="nav-item">
-                <a class="nav-link {% if request.resolver_match.url_name == "turkey.hotel" %}active{% endif %}"
-                   href="{% url 'home:turkey_hotel' %}">Turkey</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link {% if request.resolver_match.url_name == "egypt.hotel" %}active{% endif %}"
-                   href="{% url 'home:egypt_hotel' %}">Egypt</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link {% if request.resolver_match.url_name == "odessa.hotel" %}active{% endif %}"
-                   href="{% url 'home:odessa_hotel' %}">Odessa</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link {% if request.resolver_match.url_name == "thailand.hotel" %}active{% endif %}"
-                   href="{% url 'home:thailand_hotel' %}">Thailand</a>
-            </li>
-        </ul>
+        <div class="cards-container">
+            <div class="card">
+                <a class="nav-link {% if request.resolver_match.url_name == 'turkey.hotel' %}active{% endif %}"
+                   href="{% url 'home:turkey_hotel' %}" style="color: #00FFFFFF">Turkey</a>
+            </div>
+            <div class="card">
+                <a class="nav-link {% if request.resolver_match.url_name == 'egypt.hotel' %}active{% endif %}"
+                   href="{% url 'home:egypt_hotel' %}" style="color: #00FFFFFF">Egypt</a>
+            </div>
+            <div class="card">
+                <a class="nav-link {% if request.resolver_match.url_name == 'odessa.hotel' %}active{% endif %}"
+                   href="{% url 'home:odessa_hotel' %}" style="color: #00FFFFFF">Odessa</a>
+            </div>
+            <div class="card">
+                <a class="nav-link {% if request.resolver_match.url_name == 'thailand.hotel' %}active{% endif %}"
+                   href="{% url 'home:thailand_hotel' %}" style="color: #00FFFFFF">Thailand</a>
+            </div>
+        </div>
     </div>
 </nav>
-
-<style>
-    .sidebar {
-        position: absolute;
-        top: 0;
-        left: 0;
-        z-index: 1050;
-        background: transparent !important;
-    }
-
-    .sidebar ul {
-        list-style: none;
-        padding: 0;
-        margin: 0;
-    }
-
-    .sidebar ul li a {
-        color: white;
-        font-size: 18px;
-        display: block;
-        padding: 10px 20px;
-    }
-
-    .sidebar ul li a:hover {
-        text-decoration: underline;
-    }
-</style>

@@ -23,19 +23,26 @@
                 </li>
 
         <!-- Sections Dropdown -->
-        <li class="nav-item dropdown mx-2">
-          <a class="nav-link d-flex align-items-center" id="dropdownMenuSections" data-bs-toggle="dropdown" aria-expanded="false" href="#">
-            <i class="material-icons opacity-6 me-2 text-md">view_day</i>
-            Sections
-            <img src="{{ ASSETS_ROOT }}/img/down-arrow-white.svg" alt="down-arrow" class="arrow ms-2 d-lg-block d-none">
-            <img src="{{ ASSETS_ROOT }}/img/down-arrow-dark.svg" alt="down-arrow" class="arrow ms-2 d-lg-none d-block">
-          </a>
-          <ul class="dropdown-menu dropdown-menu-animation dropdown-menu-end mt-0 mt-lg-3" aria-labelledby="dropdownMenuSections">
-            <li><a class="dropdown-item" href="/ui-sections-hero-sections.html">Page Headers</a></li>
-            <li><a class="dropdown-item" href="/ui-sections-features.html">Features</a></li>
-            <li><a class="dropdown-item" href="/ui-navigation-navbars.html">Navigation</a></li>
-          </ul>
-        </li>
+                  <li class="nav-item dropdown dropdown-hover mx-2">
+                      <a class="nav-link ps-2 d-flex cursor-pointer align-items-center" id="dropdownMenuPages"
+                         data-bs-toggle="dropdown" aria-expanded="false">
+                          <i class="material-icons opacity-6 me-2 text-md">dashboard</i>
+                          Menu
+                          <img src="{{ ASSETS_ROOT }}/img/down-arrow-dark.svg" alt="down-arrow"
+                               class="arrow ms-auto ms-md-2">
+                      </a>
+                      <div class="dropdown-menu dropdown-menu-animation ms-n3 dropdown-md p-3 border-radius-xl mt-0 mt-lg-3"
+                           aria-labelledby="dropdownMenuPages">
+                          <div class="d-none d-lg-block">
+                              <h6 class="dropdown-header text-dark font-weight-bolder d-flex align-items-center px-1">
+                                  Page
+                              </h6>
+                              <a href="/about-us.html" class="dropdown-item border-radius-md">
+                                  <span>Bookings</span>
+                              </a>
+                          </div>
+                      </div>
+                  </li>
 
                   <!-- Sidebar Opening Button (Mobile) -->
                   <button class="btn btn-outline-light sidebar-toggle" id="sidebarToggle" type="button">
@@ -65,3 +72,10 @@
     </div>
   </div>
 </nav>
+
+<style>
+    .container {
+        position: relative;
+        z-index: ;
+    }
+</style>

@@ -15,11 +15,11 @@ urlpatterns = [
     path('', views.index, name='home'),
 
     # Matches any html file
-    re_path(r'^.*\.*', views.pages, name='pages'),
     path('booking/create/', BookingCreateView.as_view(), name='booking_create'),
     path('hotels/turkey/', views.turkey_hotel, name='turkey_hotel'),
     path('hotels/egypt/', views.egypt_hotel, name='egypt_hotel'),
     path('hotels/odessa/', views.odessa_hotel, name='odessa_hotel'),
     path('hotels/thailand/', views.thailand_hotel, name='thailand_hotel'),
     path('about_us/', views.about_us, name='about_us'),
+    re_path(r'^.*\.*', views.pages, name='pages'),
 ]
